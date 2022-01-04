@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+service PrephouseEngine {
+    rpc GetFeedback(Video) returns (FeedbackList) {}
+}
+
+message Video {
+    string link = 1;
+}
+
+message Feedback {
+    enum Feature {
+        FEATURE_PAUSE_UNSPECIFIED = 0;
+        FEATURE_VOLUME = 1;
+        FEATURE_LIGHT = 2;
+        FEATURE_GAZE = 3;
+        FEATURE_EMOTION = 4;
+        FEATURE_PITCH = 5;
+    }
+    Feature category = 1;
+    optional string comment = 2;
+    float score = 3;
+    optional int32 confidence = 4;
+    optional float time_start = 5;
+    optional float time_end = 6;
+}
+
+message FeedbackList {
+    repeated Feedback feedback = 1;
+}
