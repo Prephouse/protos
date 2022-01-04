@@ -15,14 +15,14 @@ Our gRPC services are currently only generated and supported in Python.
 ### Setup
 
 1. Download and install [Buf][buf] and [pre-commit][pre-commit]
-3. Run `buf generate` on your command line interface (CLI)
+3. Run `buf generate`
 
 ### Development
 
-- Run `buf lint` on your CLI to check the proto files against linter rules
-- Run `buf breaking --against .git#branch=main` on your CLI to check for any breaking changes between your .proto
+- Run `buf lint` to check the proto files against linter rules
+- Run `buf breaking --against .git#branch=main` to check for any breaking changes between your .proto
   files and the current HEAD of the local main branch
-- Run `./update_protos.sh` on your CLI when you make changes to any .proto file in this repository
+- Run `./update_protos.sh` when you make changes to any .proto file in this repository
 
 > The `./update_protos.sh` script compiles the protocol buffers and, unless the -d option is set, copies over the
 > gRPC code blocks to the places where they're expected to be used.
