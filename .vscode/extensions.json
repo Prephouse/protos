@@ -1,7 +1,7 @@
 {
   "recommendations": [
+    "bufbuild.vscode-buf",
     "ms-vsliveshare.vsliveshare",
-    "zxh404.vscode-proto3",
-    "bufbuild.vscode-buf"
+    "zxh404.vscode-proto3"
   ]
 }
