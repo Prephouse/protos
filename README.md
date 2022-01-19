@@ -15,7 +15,7 @@ Our gRPC services are currently only generated and supported in Python.
 ### Setup
 
 1. Download and install [Buf][buf] and [pre-commit][pre-commit]
-3. Run `buf generate`
+2. Run `buf generate`
 
 ### Development
 

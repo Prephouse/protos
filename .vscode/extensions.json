@@ -1,6 +1,8 @@
 {
   "recommendations": [
     "bufbuild.vscode-buf",
+    "DavidAnson.vscode-markdownlint",
+    "EditorConfig.EditorConfig",
     "ms-vsliveshare.vsliveshare",
     "zxh404.vscode-proto3"
   ]
