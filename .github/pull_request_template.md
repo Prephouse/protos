@@ -10,9 +10,12 @@
 ## Checklist
 
 <!-- Ensure the following requirements are met before merging your branch -->
-- [ ] New .proto files have been placed in the correct package
-- [ ] Generated gRPC code has been copied to the repositories that rely on that code
-- [ ] Generated gRPC code has **not** been manually edited
+- [ ] Placed new .proto files in the correct package
+- [ ] Copied the updated gRPC code to the [backend][backend] and [analyzer-engine][analyzer-engine] repositories
+- [ ] Made **no** manual edits to files in the gen directory
+
+[backend]: https://github.com/Prephouse/backend
+[analyzer-engine]: https://github.com/Prephouse/analyzer-engine
 
 ## Student Hours
 

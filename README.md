@@ -4,9 +4,9 @@
 
 The protocol buffers for our gRPCs are consolidated in this repository. Rather than run `protoc` directly,
 we utilize [Buf][buf] to compile the protocol buffers in a simple and standardized manner. The corresponding
-gRPC code (messages, stubs and so on) are generated into the `gen` folder under the respective programming language
-(e.g., gen/python would contain the Python code) and can then be used in the appropriate subsystems including the
-backend server and the analyzer engine.
+gRPC code (messages, stubs and so on) are generated in the [gen](gen) folder under the respective programming
+language (e.g., gen/python would contain the Python implementation of the gRPC) and can then be used in
+the appropriate subsystems including the backend server and the analyzer engine.
 
 Our gRPC services are currently only generated and supported in Python.
 

@@ -1,11 +1,11 @@
 {
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
+  "git.confirmSync": false,
   "git.enableSmartCommit": true,
   "git.fetchOnPull": true,
-  "git.confirmSync": false,
   "[proto3]": {
-    "editor.tabSize": 2,
+    "editor.tabSize": 4,
     "editor.insertSpaces": true
   }
 }
