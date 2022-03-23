@@ -1,30 +1,40 @@
 syntax = "proto3";
 
 service PrephouseEngine {
-    rpc GetFeedback(Video) returns (FeedbackList) {}
+    rpc GetFeedback(MediaList) returns (FeedbackList) {}
+    rpc GetMockFeedback(MediaList) returns (FeedbackList) {}
 }
 
-message Video {
-    string link = 1;
+message MediaList {
+    string audio_link = 1;
+    string transcript_link = 2;
+    optional string video_link = 3;
 }
 
 message Feedback {
     enum Feature {
-        FEATURE_PAUSE_UNSPECIFIED = 0;
-        FEATURE_VOLUME = 1;
-        FEATURE_LIGHT = 2;
-        FEATURE_GAZE = 3;
-        FEATURE_EMOTION = 4;
-        FEATURE_PITCH = 5;
+        FEATURE_UNSPECIFIED = 0;
+        FEATURE_PAUSE = 1;
+        FEATURE_VOLUME = 2;
+        FEATURE_LIGHT = 3;
+        FEATURE_GAZE = 4;
+        FEATURE_EMOTION = 5;
+        FEATURE_PITCH = 6;
+        FEATURE_FILLER_WORD = 7;
+        TEXTUAL_SUMMARY = 8;
     }
     Feature category = 1;
-    optional string comment = 2;
-    float score = 3;
-    optional int32 confidence = 4;
-    optional float time_start = 5;
-    optional float time_end = 6;
+    optional string subcategory = 2;
+    optional string comment = 3;
+    float result = 4;
+    optional float confidence = 5;
+    optional float time_start = 6;
+    optional float time_end = 7;
 }
 
 message FeedbackList {
     repeated Feedback feedback = 1;
+    string engine_version = 2;
+    string engine_config = 3;
+    string textual_summary = 4;
 }
